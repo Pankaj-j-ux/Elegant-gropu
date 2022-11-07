@@ -137,9 +137,25 @@ li > a {
   justify-content: center;
 }
 
+.section2 > h1 {
+  text-align: center;
+  color: grey;
+  text-shadow: 1px 5px 5px;
+}
+
+.download-section > h2 {
+  text-align: center;
+  /* color: grey; */
+  text-shadow: 1px 5px 5px;
+}
+
 @media (max-width: 768px) {
   .download-section > h2 {
     font-size: 22px;
+  }
+
+  .section2 > h1 {
+    font-size: 24px;
   }
 
   .download-card > h4 {
