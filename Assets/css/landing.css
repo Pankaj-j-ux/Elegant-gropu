@@ -149,6 +149,14 @@ li > a {
   text-shadow: 1px 5px 5px;
 }
 
+.thankyou {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 768px) {
   .download-section > h2 {
     font-size: 22px;
