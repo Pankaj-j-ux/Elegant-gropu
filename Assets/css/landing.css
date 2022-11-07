@@ -1,0 +1,166 @@
+/** @format */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav {
+  background-color: white;
+}
+
+.section1 {
+  padding: 40px 0px;
+  background-color: #8d4df3;
+  color: white;
+}
+
+.download-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.download-card {
+  /* background-color: #691fe0; */
+  background-color: white;
+  color: gray;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+
+  border-radius: 15px;
+}
+
+.download-card > button {
+  margin-top: 25px;
+  border: none;
+  background-color: #8d4df3;
+  padding: 10px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  border-radius: 10px;
+}
+
+.download-card > button:hover {
+  background-color: #580cd1;
+}
+
+.section2,
+.section3 {
+  margin: 60px 0px;
+}
+
+.flex {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 1%;
+  align-items: center;
+}
+
+.part1 > img {
+  width: 100%;
+}
+
+.part2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+li {
+  font-size: 18px;
+}
+
+.findout-btn {
+}
+
+.findout-btn {
+  margin-top: 25px;
+  border: none;
+  background-color: #8d4df3;
+  padding: 10px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  border-radius: 10px;
+}
+
+.findout-btn:hover {
+  background-color: #580cd1;
+}
+
+.footer {
+  padding: 40px 0px;
+  border-top: 1px grey solid;
+}
+.copyright {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  color: grey;
+  padding: 20px;
+}
+
+.li {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-link > a {
+  text-decoration: none;
+}
+
+li > a {
+  color: gray;
+  text-decoration: none;
+}
+
+.footer-link,
+.social-link {
+  padding: 30px 0px;
+}
+
+.social-link {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .download-section > h2 {
+    font-size: 22px;
+  }
+
+  .download-card > h4 {
+    font-size: 16px;
+  }
+
+  .download-card > h5 {
+    font-size: 14px;
+  }
+
+  .download-card > button {
+    font-size: 16px;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .part2 {
+    align-items: center;
+  }
+}
