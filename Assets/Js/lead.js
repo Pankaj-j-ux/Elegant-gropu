@@ -8,20 +8,35 @@ const model_body = document.getElementById("model-body");
 const download1 = document.getElementById("Download1");
 const findout1 = document.getElementById("Find-Out1");
 const findout2 = document.getElementById("Find-Out2");
+const findout3 = document.getElementById("Find-Out3");
 var notifys = document.getElementById("notify");
-var isDownload = false;
+var isDownloadPDF = false;
+var isPDF = false;
 var once = false;
+var Comming_From = "NANDIPET BROUCHER";
 
 download1.addEventListener("click", () => {
-  isDownload = true;
+  Comming_From = "NANDIPET BROUCHER";
+  isDownloadPDF = true;
+  isPDF = false;
 });
 
 findout1.addEventListener("click", () => {
-  isDownload = false;
+  Comming_From = "NANDIPET BROUCHER";
+  isDownloadPDF = false;
+  isPDF = false;
 });
 
 findout2.addEventListener("click", () => {
-  isDownload = false;
+  Comming_From = "NANDIPET BROUCHER";
+  isDownloadPDF = false;
+  isPDF = false;
+});
+
+findout3.addEventListener("click", () => {
+  Comming_From = "KOMMIREDDYPALLY";
+  isDownloadPDF = false;
+  isPDF = true;
 });
 
 // SHOW SUCCESS IN FORM
@@ -107,17 +122,27 @@ forms.addEventListener("submit", async (event) => {
       Email: Email.value,
       Phone: Phone.value,
       City: City.value,
+      Comming_From: Comming_From,
     }),
   })
     .then((response) => {
       //   console.log(response);
-      if (isDownload) {
+      if (isDownloadPDF) {
         console.log("DOWNLOAD");
         downloadFile(
           "./Assets/Doc/NANDIPET BROUCHER NEW PRICE.pdf",
           "NANDIPET BROUCHER NEW PRICE"
         );
       }
+
+      if (isPDF) {
+        console.log("PDF");
+        downloadFile(
+          "./Assets/Doc/KOMMIREDDYPALLY-1-5_merged.pdf",
+          "KOMMIREDDYPALLY"
+        );
+      }
+
       thankyou();
       once = true;
     })
